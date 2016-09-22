@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.5.2)
 project(gakusai)
+set(PROJECT_ROOT ${CMAKE_CURRENT_LIST_DIR})
 
 add_definitions("-Wall -std=c++14")
 set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
