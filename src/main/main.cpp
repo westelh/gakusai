@@ -5,7 +5,6 @@
 #include "utils/utils.h"
 #include "opencv2/core/core.hpp"
 #include "opencv2/highgui/highgui.hpp"
-#include "opencv2/tracking/tracker.hpp"
 
 int main(int argc, const char* argv[]) {
 	auto args = argv_to_vec(argc, argv);
@@ -24,4 +23,12 @@ int main(int argc, const char* argv[]) {
 		std::cout << "failed\n";
 		exit(1);
 	} else std::cout << "succeeded\n";
+
+	cv::namedWindow("main");
+	cv::Mat frame;
+	while(video.grab()) {
+		video.retrieve(frame);
+		cv::imshow("main", frame);
+		cv::waitKey();
+	}
 }
