@@ -19,3 +19,5 @@ include_directories(${GTEST_INCLUDE_DIRS})
 # sub directories
 add_subdirectory(src/main)
 add_subdirectory(src/main/test)
+add_subdirectory(src/utils)
+add_subdirectory(src/utils/test)
